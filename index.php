@@ -1,9 +1,17 @@
 <?php
+declare(strict_types = 1);
 
-const RESULT_WINNER = 1;
-const RESULT_LOSER = -1;
-const RESULT_DRAW = 0;
-const RESULT_POSSIBILITIES = [RESULT_WINNER, RESULT_LOSER, RESULT_DRAW];
+class Encounter
+{
+    public const RESULT_WINNER = 1;
+    public const RESULT_LOSER = -1;
+    public const RESULT_DRAW = 0;
+    public const RESULT_POSSIBILITIES = [RESULT_WINNER, RESULT_LOSER, RESULT_DRAW];
+    public int $levelPlayerOne;
+    public int $againstLevelPlayerTwo;
+    public int $playerOneResult;
+}
+
 
 function probabilityAgainst(int $levelPlayerOne, int $againstLevelPlayerTwo)
 {
